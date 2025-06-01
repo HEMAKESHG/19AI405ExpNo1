@@ -4,13 +4,19 @@
 
 
 <h3>AIM:</h3>
-<br>
+
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
-<br>
+
+
 <h3>Theory</h3>
-<h3>Medicine prescribing agent:</h3>
-<p>Such this agent prescribes medicine for fever (greater than 98.5 degrees) which we consider here as unhealthy, by the user temperature input, and another environment is rooms in the hospital (two rooms). This agent has to consider two factors one is room location and an unhealthy patient in a random room, the agent has to move from one room to another to check and treat the unhealthy person. The performance of the agent is calculated by incrementing performance and each time after treating in one room again it has to check another room so that the movement causes the agent to reduce its performance. Hence, agents prescribe medicine to unhealthy.</p>
-<hr>
+
+<p>Performance Measure: minimize energy consumption, maximize dirt pick up. Making this precise:
+one point for each clean square over lifetime of 1000 steps.
+Environment: two squares, dirt distribution unknown, assume accions are deterministic and
+environment is static (clean squares stay clean).
+Actuators: Left, Right, Suck, NoOp.
+Sensors: agent can perceive its location and whether location is dirty.</p>
+
 <h3>PEAS DESCRIPTION:</h3>
 <table>
   <tr>
@@ -21,25 +27,25 @@
     <td><strong>Sensors</strong></td>
   </tr>
     <tr>
-    <td><strong>Medicine prescribing agent</strong></td>
-    <td><strong>Treating unhealthy, agent movement</strong></td>
-     <td><strong>Rooms, Patient</strong></td>
-    <td><strong>Medicine, Treatment</strong></td>
-    <td><strong>Location, Temperature of patient</strong></td>
+    <td><strong>Vaccum Cleaner</strong></td>
+    <td><strong>Cleanliness, Number of Movements</strong></td>
+     <td><strong>Rooms, Dust</strong></td>
+    <td><strong>Steering, Cleanliness</strong></td>
+    <td><strong>Location, Motion</strong></td>
   </tr>
 </table>
 <hr>
 <H3>DESIGN STEPS</H3>
 <h3>STEP 1:Identifying the input:</h3>
-<p>Temperature from patients, Location.</p>
+<p>Location, Motion</p>
 <h3>STEP 2:Identifying the output:</h3>
-<p>Prescribe medicine if the patient in a random has a fever.</p>
+<p>Cleanliness, Number of Movements</p>
 <h3>STEP 3:Developing the PEAS description:</h3>
 <p>PEAS description is developed by the performance, environment, actuators, and sensors in an agent.</p>
 <h3>STEP 4:Implementing the AI agent:</h3>
-<p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
+<p>Clean the dirt And check for the dirt in random room</p>
 <h3>STEP 5:</h3>
-<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+<p>Measure the performance parameters: minimize energy consumption, maximize dirt pick up</p>
 
 ### PROGRAM
 ```
